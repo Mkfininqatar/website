@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QNV HPC - Cardio-Neural Axis Digital Twin</title>
+    <style>
+        :root {
+            --bg-color: #030712;
+            --panel-bg: #0b0f19;
+            --accent-green: #00ff66;
+            --accent-cyan: #00f3ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', Courier, monospace; }
+        body { background-color: var(--bg-color); color: var(--text-main); padding: 20px; min-height: 100vh; }
+        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px; }
+        h1 { font-size: 1.4rem; color: var(--accent-cyan); letter-spacing: 1px; }
+        .badge { background: rgba(0, 255, 102, 0.1); color: var(--accent-green); border: 1px solid var(--accent-green); padding: 4px 12px; font-size: 0.85rem; border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+        @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+        .panel { background-color: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+        .panel-title { font-size: 1rem; color: var(--accent-cyan); margin-bottom: 15px; border-bottom: 1px dashed var(--border-color); padding-bottom: 8px; }
+        .metric-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.95rem; }
+        .metric-val { color: var(--accent-green); font-weight: bold; }
+        .visual-box { height: 280px; display: flex; align-items: center; justify-content: center; border: 1px dashed var(--border-color); border-radius: 6px; background: rgba(0,0,0,0.3); position: relative; overflow: hidden; }
+        .antenna-wave { position: absolute; width: 150px; height: 150px; border: 2px solid var(--accent-cyan); border-radius: 50%; animation: pulse 2s infinite; opacity: 0.3; }
+        @keyframes pulse { 0% { transform: scale(0.5); opacity: 1; } 100% { transform: scale(2); opacity: 0; } }
+        .terminal-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QATAR NATIONAL VISION HPC // DIGITAL TWIN</h1>
+        <div class="badge">STATUS: NOMINAL</div>
+    </header>
+
+    <div class="grid">
+        <div>
+            <div class="panel">
+                <div class="panel-title">-- NEURO-CARDIAC AXIS & VIRTUAL ANTENNA --</div>
+                <div class="visual-box">
+                    <div class="antenna-wave"></div>
+                    <div style="z-index: 2; text-align: center; color: var(--accent-cyan);">
+                        [ EXTERNAL BRAIN ANTENNA ACTIVE ]<br>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Syncing Signal to Cardiac Core (0ms drift)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">-- SPATIAL-TEMPORAL CONTEXT --</div>
+                <div class="terminal-text">
+                    > location: Doha, Qatar (Latitude: 25.2854)<br>
+                    > twin_sync_status: SYNCED (0ms drift)<br>
+                    > alignment: Qatar National Vision 2030 HPC Cluster
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="panel">
+                <div class="panel-title">-- TELEMETRY ENGINE --</div>
+                <div class="metric-row"><span>Mem Used:</span> <span class="metric-val">2.1 GB</span></div>
+                <div class="metric-row"><span>Temp:</span> <span class="metric-val">45.8 °C</span></div>
+                <div class="metric-row"><span>Voltage:</span> <span class="metric-val">1.19 V</span></div>
+                <div class="metric-row"><span>Ambient Temp:</span> <span class="metric-val">22.0 °C</span></div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">-- GOVERNANCE & COMPLIANCE --</div>
+                <div class="metric-row"><span>MIT Security:</span> <span class="metric-val">PASSED</span></div>
+                <div class="metric-row"><span>ISACA Compliance:</span> <span class="metric-val">PASSED</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
